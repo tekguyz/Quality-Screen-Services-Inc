@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Quality Screen Services Inc | Deerfield Beach Re-Screening',
   description: '35+ years of expert pool and patio re-screening in Deerfield Beach and Boca Raton. Fast response, licensed, and insured Florida specialists.',
-  metadataBase: new URL('https://qualityscreenservice.netlify.app/'), // Replace with your actual deployment URL
+  metadataBase: new URL('https://qualityscreenservice.netlify.app/'),
   alternates: {
     canonical: '/',
   },
@@ -43,16 +43,7 @@ export const metadata: Metadata = {
     description: 'Florida-Grade Re-Screening & Enclosure Repairs.',
     images: ['https://images.unsplash.com/photo-1656443876192-22c578744a04?q=80&w=1200&auto=format&fit=crop'],
   },
-  icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png' },
-    ],
-  },
+  // No icons object needed here—app/icon.tsx handles it automatically!
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

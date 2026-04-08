@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Forms Detection</title>
+</head>
+<body>
+    <!-- This file is for Netlify's form detection crawler -->
+    <form 
+        name="contact" 
+        data-netlify="true" 
+        netlify-honeypot="bot-field" 
+        action="/forms.html" 
+        method="POST" 
+        enctype="multipart/form-data"
+    >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="bot-field" />
+        <input type="text" name="fullName" />
+        <input type="tel" name="phone" />
+        <select name="serviceType">
+            <option value="Pool Enclosure">Pool Enclosure</option>
+            <option value="Patio Re-screening">Patio Re-screening</option>
+            <option value="Repair">Repair</option>
+            <option value="Pet Mesh">Pet Mesh</option>
+        </select>
+        <textarea name="message"></textarea>
+    </form>
+</body>
+</html>

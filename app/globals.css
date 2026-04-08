@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: oklch(52.5% 0.13 250);
+  --color-sky-blue: oklch(80.5% 0.08 240);
+  --color-brand-yellow: oklch(84% 0.16 95);
+  --color-pale-yellow: oklch(97% 0.04 100);
+  --color-professional-navy: oklch(20% 0.04 250);
+  --color-legacy-black: #000000;
+  
+  /* Map legacy variables to new brand colors for easier transition if needed, 
+     but we will update class names directly as requested */
+  --color-primary: var(--color-brand-blue);
+  --color-secondary: var(--color-sky-blue);
+  --color-accent: var(--color-brand-yellow);
+  --color-offwhite: var(--color-pale-yellow);
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-pale-yellow);
+  color: var(--color-legacy-black);
+}

@@ -17,7 +17,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Quality Screen Services Inc | Deerfield Beach Re-Screening',
   description: '35+ years of expert pool and patio re-screening in Deerfield Beach and Boca Raton. Fast response, licensed, and insured Florida specialists.',
-  metadataBase: new URL('https://qualityscreenservice.netlify.app/'),
+  metadataBase: new URL('https://qualityscreenservices.netlify.app/'),
   alternates: {
     canonical: '/',
   },

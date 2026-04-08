@@ -14,11 +14,15 @@ export default function ContactForm() {
     
     const form = e.currentTarget;
     const formData = new FormData(form);
+    formData.append('form-name', 'contact');
     
     try {
-      await fetch('/', {
+      await fetch('/forms.html', {
         method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { 
+          'X-Requested-With': 'XMLHttpRequest',
+          'Content-Type': 'application/x-www-form-urlencoded' 
+        },
         body: new URLSearchParams(formData as any).toString(),
       });
       setIsSubmitted(true);
@@ -108,8 +112,10 @@ export default function ContactForm() {
                 <form 
                   name="contact" 
                   method="POST" 
+                  action="/forms.html"
                   data-netlify="true" 
                   netlify-honeypot="bot-field"
+                  encType="multipart/form-data"
                   onSubmit={handleSubmit}
                   className="space-y-5"
                 >
